@@ -22,10 +22,16 @@ func answer2() {
 	var str = "hello沙河小王子"
 	count := 0
 	s := []rune(str)
-	for i := 0; i < len(s); i++ {
-		if s[i] >= 0x4E00 && s[i] <= 0x9FA5 {
+	// for i := 0; i < len(s); i++ {
+	// 	if s[i] >= 0x4E00 && s[i] <= 0x9FA5 {
+	// 		count++
+	// 	}
+	// }
+	for _, v := range s {
+		if v > 256 {
 			count++
 		}
+		// fmt.Println(string(v))
 	}
 	fmt.Println(count)
 }
