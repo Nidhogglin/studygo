@@ -21,13 +21,15 @@ func answer1() {
 func answer2() {
 	var str = "hello沙河小王子"
 	count := 0
-	s := []rune(str)
+	// 方法一，先将字符串转换为数组，再进行遍历
+	//s := []rune(str)
 	// for i := 0; i < len(s); i++ {
 	// 	if s[i] >= 0x4E00 && s[i] <= 0x9FA5 {
 	// 		count++
 	// 	}
 	// }
-	for _, v := range s {
+	// 方法二，直接遍历字符串
+	for _, v := range str {
 		if v > 256 {
 			count++
 		}
